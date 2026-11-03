@@ -1,0 +1,139 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8fafc;
+    padding: 12px;
+    color: #111;
+}
+
+/* 8.1 Grid layout with columns, fr and gap */
+.dashboard {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    grid-template-areas:
+        "head head"
+        "side main"
+        "foot foot";
+    gap: 10px;
+    padding: 10px;
+    background-color: #edf2f9;
+    min-height: 600px;
+}
+
+/* 8.3 Named Grid Areas */
+.head {
+    grid-area: head;
+    background-color: #13213d;
+    color: white;
+    padding: 15px;
+    min-height: 140px;
+    border-radius: 9px;
+}
+
+.side {
+    grid-area: side;
+    background-color: #dce6fa;
+    padding: 15px;
+    border-radius: 9px;
+}
+
+.side h3 {
+    margin-bottom: 6px;
+}
+
+.side ul {
+    padding-left: 18px;
+}
+
+.side li {
+    margin: 6px 0;
+}
+
+.side a {
+    color: black;
+    text-decoration: none;
+}
+
+.main {
+    grid-area: main;
+
+    /* 8.2 Automatically responsive cards */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+    align-content: start;
+}
+
+/* 8.4 Flexbox inside every card */
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+
+    background-color: white;
+    padding: 15px;
+    border-radius: 12px;
+    min-height: 70px;
+}
+
+.icon {
+    font-size: 30px;
+    line-height: 1;
+}
+
+.info strong {
+    display: block;
+    font-size: 16px;
+}
+
+.info p {
+    font-size: 16px;
+}
+
+.foot {
+    grid-area: foot;
+    background-color: #13213d;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    min-height: 125px;
+    border-radius: 9px;
+}
+
+/* Responsive layout for mobile */
+@media (max-width: 600px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "head"
+            "side"
+            "main"
+            "foot";
+    }
+
+    .head {
+        min-height: 100px;
+    }
+
+    .side {
+        min-height: auto;
+    }
+
+    .main {
+        grid-template-columns: repeat(
+            auto-fit,
+            minmax(150px, 1fr)
+        );
+    }
+
+    .foot {
+        min-height: 90px;
+    }
+}
