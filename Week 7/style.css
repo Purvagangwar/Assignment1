@@ -1,0 +1,182 @@
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #111827;
+    background-color: white;
+}
+
+/* 7.1 Navbar using Flexbox */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #13213d;
+    color: white;
+    padding: 15px 25px;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    color: #ffb800;
+}
+
+.signup-btn,
+.get-started-btn {
+    background-color: #ffb800;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* 7.2 Centered Hero Banner */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #315bea;
+    color: white;
+    min-height: 270px;
+    padding: 40px 20px;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+}
+
+.hero h1 {
+    font-size: 32px;
+}
+
+.hero p {
+    font-size: 16px;
+}
+
+.get-started-btn {
+    margin-top: 0;
+}
+
+/* 7.3 Cards using Flexbox and flex-wrap */
+.courses {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 25px;
+}
+
+.card {
+    flex: 1 1 200px;
+    background-color: #eef2ff;
+    border-radius: 12px;
+    padding: 22px 15px;
+    text-align: center;
+}
+
+.card h2 {
+    font-size: 18px;
+    margin-bottom: 2px;
+}
+
+.card p {
+    font-size: 16px;
+}
+
+/* 7.5 Responsive layout: Tablet */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .courses {
+        padding: 20px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .logo {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .signup-btn {
+        padding: 8px 16px;
+    }
+
+    .hero {
+        min-height: 240px;
+    }
+
+    .hero h1 {
+        font-size: 25px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .courses {
+        padding: 16px;
+        gap: 12px;
+    }
+
+    .card {
+        flex: 1 1 200px;
+    }
+}
