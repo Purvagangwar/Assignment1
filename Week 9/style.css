@@ -1,0 +1,196 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fa;
+    color: #14213d;
+}
+
+/* Page container */
+.page {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+/* 9.3 Navbar using Flexbox */
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+
+    padding: 0.8rem;
+    background-color: #13213d;
+    color: white;
+}
+
+.logo {
+    font-size: 1.2rem;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+
+.nav-links a:hover {
+    color: #ffbd39;
+}
+
+/* 9.1 Mobile-first hero layout */
+.hero {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 0.7rem;
+
+    padding: 1.5rem 0.65rem;
+    background-color: #315bea;
+    color: white;
+    text-align: center;
+}
+
+.hero-content h2 {
+    font-size: 1.25rem;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 0.8rem;
+    margin-top: 0.2rem;
+}
+
+.hero-image {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 0.4rem;
+    background-color: #9eb5f5;
+}
+
+/* Feature cards using CSS Grid */
+.features {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.7rem;
+    padding: 0.8rem;
+}
+
+.feature-card {
+    background-color: #eef2ff;
+    border-radius: 0.4rem;
+    padding: 1rem 0.6rem;
+    text-align: center;
+}
+
+.feature-card h3 {
+    font-size: 0.95rem;
+    margin-bottom: 0.15rem;
+}
+
+.feature-card p {
+    font-size: 0.8rem;
+}
+
+.footer {
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.8rem;
+    background-color: #13213d;
+    color: white;
+}
+
+/* 9.1 Tablet: 768px and above */
+@media (min-width: 768px) {
+
+    .page {
+        width: 90%;
+    }
+
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0.8rem 1.2rem;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 2rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.7rem;
+    }
+
+    .hero-image {
+        width: 70%;
+        max-width: 32rem;
+    }
+
+    .features {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        padding: 1.2rem;
+    }
+}
+
+/* 9.1 Desktop: 1024px and above */
+@media (min-width: 1024px) {
+
+    .page {
+        width: 80%;
+        max-width: 1100px;
+    }
+
+    .navbar {
+        padding: 1rem 1.5rem;
+    }
+
+    .hero {
+        padding: 2.5rem;
+        gap: 1rem;
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+
+    .hero-image {
+        width: 60%;
+        max-width: 36rem;
+    }
+
+    .features {
+        gap: 1rem;
+        padding: 1.5rem;
+    }
+
+    .feature-card {
+        padding: 1.2rem;
+    }
+}
