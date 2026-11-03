@@ -1,0 +1,157 @@
+/* Task 5.4: CSS variables */
+:root {
+    --primary-color: #315bea;
+    --page-background: #edf1ff;
+    --card-background: #ffffff;
+    --text-color: #171717;
+    --border-color: #cbd0df;
+    --spacing: 22px;
+}
+
+/* Task 5.2: Universal selector */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* General page styling */
+body {
+    font-family: "Roboto Slab", Georgia, serif;
+    background-color: var(--page-background);
+    color: var(--text-color);
+    font-size: 18px;
+    line-height: 1.6;
+    padding: var(--spacing);
+}
+
+/* Task 5.2: ID selector */
+#hero {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: 15px;
+    margin-bottom: 22px;
+}
+
+/* Task 5.2: Element selector */
+h1 {
+    font-size: 44px;
+    line-height: 1.3;
+    margin-bottom: 8px;
+}
+
+/* Make the hero heading white */
+#hero h1 {
+    color: white;
+}
+
+/* Task 5.2: Class selector */
+.card {
+    background-color: var(--card-background);
+    padding: var(--spacing);
+    border-radius: 15px;
+    margin-bottom: 22px;
+}
+
+/* Section headings */
+h2 {
+    font-size: 28px;
+    line-height: 1.4;
+    margin-bottom: 14px;
+}
+
+/* Events table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+thead {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+th,
+td {
+    padding: 12px 10px;
+}
+
+tbody tr {
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Registration form */
+.form-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+label {
+    width: 55px;
+    flex-shrink: 0;
+}
+
+input {
+    width: 258px;
+    max-width: 100%;
+    padding: 9px;
+    font: inherit;
+    font-size: 16px;
+}
+
+/* Register button */
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 9px;
+    padding: 10px 24px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2348c4;
+}
+
+/* Small-screen layout */
+@media (max-width: 500px) {
+    body {
+        padding: 12px;
+        font-size: 15px;
+    }
+
+    #hero {
+        padding: 30px 12px;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+
+    h2 {
+        font-size: 23px;
+    }
+
+    .card {
+        padding: 16px;
+    }
+
+    th,
+    td {
+        padding: 9px 5px;
+    }
+
+    .form-row {
+        flex-wrap: wrap;
+    }
+
+    input {
+        width: 100%;
+    }
+}
